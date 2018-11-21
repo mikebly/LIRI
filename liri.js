@@ -1,13 +1,16 @@
 require("dotenv").config();
 const inquirer = require("inquirer");
 const axios = require("axios");
+const moment = require("moment");
 
 const spotifyId = process.env.SPOTIFY_ID;
 const spotifySecret = process.env.SPOTIFY_SECRET;
 
 // console.log(spotifyId,spotifySecret);
 
-let bandUrl;
+let artistUrl;
+let artistEvents;
+
 const bandsInTown = function(){
     inquirer.prompt([
         {
@@ -17,12 +20,23 @@ const bandsInTown = function(){
         }
         ])
         .then(function(response){
-            bandUrl = `https://rest.bandsintown.com/artists/${response.artist}/events?app_id=codingbootcamp`;
-            console.log(bandUrl);
-            axios.get(bandUrl)
+            artistUrl = `https://rest.bandsintown.com/artists/${response.artist}/events?app_id=codingbootcamp`;
+            console.log(artistUrl);
+            axios.get(artistUrl)
             .then(function(response){
                 let {data:artistData} = response;
-                console.log(artistData.length);
+                //console.log(artistData); //array of objects detailing concert events
+                artistEvents = artistData.map((event,index)=>{
+                    let {venue:venueData,datetime:eventTime} = event;
+                    let dateObj = new Date(eventTime);
+                    let momentObj = moment(dateObj);
+                    let formattedDate = momentObj.format(`MMM Do YYYY`);
+                    console.log(`******Event ${index} Information******`);
+                    console.log(`Venue Name: ${venueData.name}`);
+                    console.log(`Location: ${venueData.city}, ${venueData.region}`);
+                    console.log(`Date: ${formattedDate}`);
+                });
+                
             });
         });
 };
