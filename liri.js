@@ -5,6 +5,7 @@ const moment = require("moment");
 const Spotify = require("node-spotify-api");
 const spotifyId = process.env.SPOTIFY_ID;
 const spotifySecret = process.env.SPOTIFY_SECRET;
+const fs = require("fs");
 
 const spotify = new Spotify({
     id: spotifyId,
@@ -18,6 +19,7 @@ let artistEvents;
 let movieUrl;
 let imdbIds = [];
 let moviesArray = [];
+let randomIndex;
 
 const bandsInTown = function () {
     inquirer.prompt([
@@ -64,10 +66,10 @@ const spotifyASong = function () {
             console.log(`searching for ${response.song}`);
             spotify.search({ type: "track", query: response.song })
                 .then(data => { console.log(data) })
-                .catch(error => { console.log(error) })
+                .catch(error => { console.log(error) });
         });
 
-}
+};
 
 const searchOMDB = function(){
     inquirer.prompt([
@@ -107,7 +109,7 @@ const searchOMDB = function(){
 
                     //since some movies do not have a "Ratings" key, push empty data so newMovie can be made without errors
                     if(Ratings[0] === undefined){
-                        Ratings.push({Value:"N/A"},{Value:"N/A"})
+                        Ratings.push({Value:"N/A"},{Value:"N/A"});
                     }
 
                     if(Ratings[1] === undefined){
@@ -134,7 +136,7 @@ const searchOMDB = function(){
                         //console.log(moviesArray);
                         let sortedMovies = moviesArray.sort(function(a,b){
                             return a.id - b.id;
-                        })
+                        });
                         //console.log(sortedMovies);
 
                         sortedMovies.map(movie=>{
@@ -147,21 +149,58 @@ const searchOMDB = function(){
                             console.log(`Language: ${movie.language}`);
                             console.log(`Plot: ${movie.plot}`);
                             console.log(`Actors: ${movie.actors}`);
-                        })
+                        });
                     }
                 })
                 .catch(function(error){
                     console.log(error);
-                })
-            })
+                });
+            });
         })
         .catch(function(error){
             console.log(error);
         });
         
-    })
+    });
     
-}
+};
+
+const doRandom = function(){
+    fs.readFile('random.txt', 'utf-8',function(error,data){
+       if(error){
+           console.log(error);
+       }
+       console.log(data);
+       const randomActions = data.split(",");
+       console.log(randomActions);
+       
+       randomIndex = Math.floor(Math.random()*(randomActions.length-1));
+       if(randomIndex % 2 !== 0){
+           randomIndex -= 1;
+       }
+       console.log(randomIndex);
+       console.log(randomActions[randomIndex]);
+       console.log(randomActions[randomIndex+1]);
+       let randomAction = randomActions[randomIndex];
+       let randomParameter = randomActions[randomIndex+1];
+       
+       switch (randomAction){
+           case "Find Concert":
+                console.log(`Finding concert...`);
+                //bandsInTown();
+                break;
+            case "Spotify A Song":
+                console.log(`Finding song...`);
+                //spotifyASong();
+                break;
+            case "Find Movie":
+                console.log(`Finding movie...`);
+                //searchOMDB();
+                break;
+       }
+       
+    });
+};
 
 
 //Initial prompt on application start to choose an action for LIRI
@@ -169,7 +208,7 @@ inquirer.prompt([
     {
         type: "list",
         name: "action",
-        choices: ["Find Concert", "Spotify A Song", "Find Movie", "Do What It Says"]
+        choices: ["Find Concert", "Spotify A Song", "Find Movie", "I'm Feeling Lucky..."]
     },
 ])
     .then(function (response) {
@@ -186,8 +225,9 @@ inquirer.prompt([
                 console.log(`Finding movie...`);
                 searchOMDB();
                 break;
-            case "Do What It Says":
+            case "I'm Feeling Lucky...":
                 console.log(`Doing what it says...`);
+                doRandom();
                 break;
         }
     })
