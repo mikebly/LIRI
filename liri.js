@@ -21,7 +21,7 @@ let imdbIds = [];
 let moviesArray = [];
 let randomIndex;
 
-const bandsInTown = function () {
+const bandsInTownPrompt = function () {
     inquirer.prompt([
         {
             type: "input",
@@ -30,7 +30,13 @@ const bandsInTown = function () {
         }
     ])
         .then(function (response) {
-            artistUrl = `https://rest.bandsintown.com/artists/${response.artist}/events?app_id=codingbootcamp`;
+            let query = response.artist;
+            bandsInTown(query);
+        });
+};
+
+const bandsInTown = function(query){
+    artistUrl = `https://rest.bandsintown.com/artists/${query}/events?app_id=codingbootcamp`;
             console.log(artistUrl);
             axios.get(artistUrl)
                 .then(function (response) {
@@ -50,11 +56,10 @@ const bandsInTown = function () {
                 })
                 .catch(function(error){
                     console.log(error);
-                })
-        });
+                });
 };
 
-const spotifyASong = function () {
+const spotifyASongPrompt = function () {
     inquirer.prompt([
         {
             type: "input",
@@ -63,15 +68,20 @@ const spotifyASong = function () {
         }
     ])
         .then(function (response) {
-            console.log(`searching for ${response.song}`);
-            spotify.search({ type: "track", query: response.song })
-                .then(data => { console.log(data) })
-                .catch(error => { console.log(error) });
+            let query = response.song;
+            spotifyASong(query);
         });
 
 };
 
-const searchOMDB = function(){
+const spotifyASong = function(query){
+    console.log(`searching for ${query}`);
+            spotify.search({ type: "track", query: query })
+                .then(data => { console.log(data) })
+                .catch(error => { console.log(error) });
+};
+
+const searchOMDBPrompt = function(){
     inquirer.prompt([
         {
             type:"input",
@@ -80,15 +90,22 @@ const searchOMDB = function(){
         }
     ])
     .then(function(response){
-        console.log(`searching for ${response.movie}`);
-        movieUrl = `http://www.omdbapi.com/?apikey=trilogy&s=${response.movie}`;
+        let query = response.movie;
+        searchOMDB(query);
+    });
+    
+};
+
+const searchOMDB = function(query){
+    console.log(`searching for ${query}`);
+        movieUrl = `http://www.omdbapi.com/?apikey=trilogy&s=${query}`;
         axios.get(movieUrl)
         .then(function(response){
             //console.log(response.data.Search);
             let movieResults = response.data.Search;
             movieResults.map(movie=>{
                 imdbIds.push(movie.imdbID);
-            })
+            });
             //console.log(imdbIds);
             imdbIds.map((imdbId,index)=>{
                 movieUrl = `http://www.omdbapi.com/?apikey=trilogy&i=${imdbId}`;
@@ -160,9 +177,6 @@ const searchOMDB = function(){
         .catch(function(error){
             console.log(error);
         });
-        
-    });
-    
 };
 
 const doRandom = function(){
@@ -187,15 +201,15 @@ const doRandom = function(){
        switch (randomAction){
            case "Find Concert":
                 console.log(`Finding concert...`);
-                //bandsInTown();
+                bandsInTown(randomParameter);
                 break;
             case "Spotify A Song":
                 console.log(`Finding song...`);
-                //spotifyASong();
+                spotifyASong(randomParameter);
                 break;
             case "Find Movie":
                 console.log(`Finding movie...`);
-                //searchOMDB();
+                searchOMDB(randomParameter);
                 break;
        }
        
@@ -215,15 +229,15 @@ inquirer.prompt([
         switch (response.action) {
             case "Find Concert":
                 console.log(`Finding concert...`);
-                bandsInTown();
+                bandsInTownPrompt();
                 break;
             case "Spotify A Song":
                 console.log(`Finding song...`);
-                spotifyASong();
+                spotifyASongPrompt();
                 break;
             case "Find Movie":
                 console.log(`Finding movie...`);
-                searchOMDB();
+                searchOMDBPrompt();
                 break;
             case "I'm Feeling Lucky...":
                 console.log(`Doing what it says...`);
