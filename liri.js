@@ -2,17 +2,9 @@ require("dotenv").config();
 const inquirer = require("inquirer");
 const axios = require("axios");
 const moment = require("moment");
-const Spotify = require("node-spotify-api");
-const spotifyId = process.env.SPOTIFY_ID;
-const spotifySecret = process.env.SPOTIFY_SECRET;
 const fs = require("fs");
+const spotify = require('./keys').spotify
 
-const spotify = new Spotify({
-    id: spotifyId,
-    secret: spotifySecret
-});
-
-// console.log(spotifyId,spotifySecret);
 
 let artistUrl;
 let artistEvents;
@@ -77,7 +69,23 @@ const spotifyASongPrompt = function () {
 const spotifyASong = function(query){
     console.log(`searching for ${query}`);
             spotify.search({ type: "track", query: query })
-                .then(data => { console.log(data) })
+                .then(data => { 
+                    //console.log(data);
+                    const {items} = data.tracks;
+                    items.map((item,index)=>{
+                       console.log(item);
+                       const {preview_url:url,name:trackName,release_date:date} = item;
+                       const {name:artistName}=item.artists[0];
+                       
+                       console.log(`-----Result ${index+1}-----`);
+                       console.log(`Track Name: ${trackName}`);
+                       console.log(`Artist: ${artistName}`);
+                       console.log(`Release Year: ${date}`);
+                       console.log(`Spotify URL: ${url}`);
+                       
+                    });
+                    
+                })
                 .catch(error => { console.log(error) });
 };
 
