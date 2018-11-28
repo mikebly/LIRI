@@ -73,14 +73,16 @@ const spotifyASong = function(query){
                     //console.log(data);
                     const {items} = data.tracks;
                     items.map((item,index)=>{
-                       console.log(item);
-                       const {preview_url:url,name:trackName,release_date:date} = item;
+                       //console.log(item);
+                       const {preview_url:url,name:trackName} = item;
                        const {name:artistName}=item.artists[0];
+                       const {name:albumName,release_date:date}=item.album
                        
                        console.log(`-----Result ${index+1}-----`);
                        console.log(`Track Name: ${trackName}`);
+                       console.log(`Album: ${albumName}`)
                        console.log(`Artist: ${artistName}`);
-                       console.log(`Release Year: ${date}`);
+                       console.log(`Release Date: ${date}`);
                        console.log(`Spotify URL: ${url}`);
                        
                     });
@@ -121,7 +123,7 @@ const searchOMDB = function(query){
                 .then(function(response){
                     //console.log(response.data);
                     let {Title, Year, imdbRating, Country, Language, Plot, Actors, Ratings } = response.data;
-                    console.log(`******Loading Movie Response ${index+1}******`);
+                    console.log(`------Loading Movie Response ${index+1}------`);
                     // console.log(Title);
                     // console.log(Year);
                     // console.log(imdbRating);
