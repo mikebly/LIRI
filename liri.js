@@ -287,7 +287,7 @@ function actionPrompt() {
                     console.log(`Buuh Bye Now!`);
                     break;
             }
-        })
+        });
 }
 
 //Start LIRI by initializing action prompt
