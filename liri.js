@@ -23,13 +23,16 @@ const bandsInTownPrompt = function () { //prompt user for band to query for
     ])
         .then(function (response) {
             let query = response.artist;
+            if(!query){
+                query = 'Nickleback' //lol nickleback
+            }
             bandsInTown(query);
         });
 };
 
 const bandsInTown = function (query) { //search bands in town for te given artist, build search url from user input
     artistUrl = `https://rest.bandsintown.com/artists/${query}/events?app_id=codingbootcamp`;
-    console.log(artistUrl);
+    console.log(`Searching for events for ${query}`);
     axios.get(artistUrl)
         .then(function (response) {
             let { data: artistData } = response;
@@ -61,6 +64,9 @@ const spotifyASongPrompt = function () { //prompt user for track name to query f
     ])
         .then(function (response) {
             let query = response.song;
+            if(!query){
+                query = 'Tommy the Cat';
+            }
             spotifyASong(query);
         });
 
@@ -104,6 +110,9 @@ const searchOMDBPrompt = function () { //prompt user for a movie title to query 
     ])
         .then(function (response) {
             let query = response.movie;
+            if(!query){
+                query = 'Requiem for a Dream';
+            }
             searchOMDB(query);
         });
 
