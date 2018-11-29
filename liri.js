@@ -11,6 +11,7 @@ let artistEvents;
 let movieUrl;
 let imdbIds = [];
 let moviesArray = [];
+let sortedMovies = [];
 let randomIndex;
 
 const bandsInTownPrompt = function () { //prompt user for band to query for
@@ -24,7 +25,7 @@ const bandsInTownPrompt = function () { //prompt user for band to query for
         .then(function (response) {
             let query = response.artist;
             if(!query){
-                query = 'Nickleback' //lol nickleback
+                query = 'Nickleback'; //lol nickleback
             }
             bandsInTown(query);
         });
@@ -33,6 +34,7 @@ const bandsInTownPrompt = function () { //prompt user for band to query for
 const bandsInTown = function (query) { //search bands in town for te given artist, build search url from user input
     artistUrl = `https://rest.bandsintown.com/artists/${query}/events?app_id=codingbootcamp`;
     console.log(`Searching for events for ${query}`);
+    updateLog(`Searching for events for ${query}\n`);
     axios.get(artistUrl)
         .then(function (response) {
             let { data: artistData } = response;
@@ -43,9 +45,13 @@ const bandsInTown = function (query) { //search bands in town for te given artis
                 let momentObj = moment(dateObj);
                 let formattedDate = momentObj.format(`MMM Do YYYY`);
                 console.log(`******Event ${index + 1} Information******`);
+                updateLog(`******Event ${index + 1} Information******\n`);
                 console.log(`Venue Name: ${venueData.name}`);
+                updateLog(`Venue Name: ${venueData.name}\n`);
                 console.log(`Location: ${venueData.city}, ${venueData.region}`);
+                updateLog(`Location: ${venueData.city}, ${venueData.region}\n`);
                 console.log(`Date: ${formattedDate}`);
+                updateLog(`Date: ${formattedDate}\n`);
             });
             actionPrompt();
         })
@@ -73,7 +79,8 @@ const spotifyASongPrompt = function () { //prompt user for track name to query f
 };
 
 const spotifyASong = function (query) { //query spotify for given track name
-    console.log(`searching for ${query}`);
+    console.log(`searching spotify for ${query}`);
+    updateLog(`searching spotify for ${query}\n`);
     spotify.search({ type: "track", query: query })
         .then(data => {
             //console.log(data);
@@ -85,14 +92,20 @@ const spotifyASong = function (query) { //query spotify for given track name
                 //deconstruct response object to to display given data
                 const { preview_url: url, name: trackName } = item;
                 const { name: artistName } = item.artists[0];
-                const { name: albumName, release_date: date } = item.album
+                const { name: albumName, release_date: date } = item.album;
 
                 console.log(`-----Result ${index + 1}-----`);
+                updateLog(`-----Result ${index + 1}-----\n`);
                 console.log(`Track Name: ${trackName}`);
-                console.log(`Album: ${albumName}`)
+                updateLog(`Track Name: ${trackName}\n`);
+                console.log(`Album: ${albumName}`);
+                updateLog(`Album: ${albumName}\n`);
                 console.log(`Artist: ${artistName}`);
+                updateLog(`Artist: ${artistName}\n`);
                 console.log(`Release Date: ${date}`);
+                updateLog(`Release Date: ${date}\n`);
                 console.log(`Spotify URL: ${url}`);
+                updateLog(`Spotify URL: ${url}\n`);
 
             });
         actionPrompt();
@@ -125,6 +138,7 @@ const searchOMDB = function (query) { //query OMDB for the movie title
     imdbIds = [];
     //query for general search to get multiple results, not singular title search. Use the resulting IMDB id's to retrieve more detailed data with singular serach. The multiple title query returns less data than desired.
     console.log(`searching for ${query}`);
+    updateLog(`searching for ${query}\n`);
     movieUrl = `http://www.omdbapi.com/?apikey=trilogy&s=${query}`;
     axios.get(movieUrl)
         .then(function (response) {
@@ -189,14 +203,24 @@ const searchOMDB = function (query) { //query OMDB for the movie title
                             //once sorted, display details
                             sortedMovies.map(movie => {
                                 console.log(`******Result ${movie.id + 1}******`);
+                                updateLog(`******Result ${movie.id + 1}******\n`);
                                 console.log(`Title: ${movie.title}`);
+                                updateLog(`Title: ${movie.title}\n`);
                                 console.log(`Released: ${movie.year}`);
+                                updateLog(`Released: ${movie.year}\n`);
                                 console.log(`IMDB Rating: ${movie.imdbRating}`);
+                                updateLog(`IMDB Rating: ${movie.imdbRating}\n`);
                                 console.log(`Rotten Tomato Score: ${movie.rottenTomatoScore}`);
+                                updateLog(`Rotten Tomato Score: ${movie.rottenTomatoScore}\n`);
                                 console.log(`Country of Origin: ${movie.country}`);
+                                updateLog(`Country of Origin: ${movie.country}\n`);
                                 console.log(`Language: ${movie.language}`);
+                                updateLog(`Language: ${movie.language}\n`);
                                 console.log(`Plot: ${movie.plot}`);
+                                updateLog(`Plot: ${movie.plot}\n`);
                                 console.log(`Actors: ${movie.actors}`);
+                                updateLog(`Actors: ${movie.actors}\n`);
+                                
                                 
                             });
                             //return to prompt
@@ -254,6 +278,19 @@ const doRandom = function () {
 
     });
 };
+
+
+function updateLog(str){
+    let time = moment();
+    fs.appendFile("log.txt",`${time}: ${str}`,function(error){
+       if(error){
+           console.log(error);
+       }
+       else{
+        //   console.log(`appending to log.txt`);
+       }
+    });
+}
 
 
 //Prompt user to select an action for LIRI
