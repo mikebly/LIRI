@@ -1,0 +1,183 @@
+Thu Nov 29 2018 18:05:39 GMT+0000: Searching for events for Nickleback
+Thu Nov 29 2018 18:05:39 GMT+0000: ******Event 1 Information******
+Thu Nov 29 2018 18:05:39 GMT+0000: Venue Name: Zepp Osaka Bayside
+Thu Nov 29 2018 18:05:39 GMT+0000: Location: Ōsaka-shi, Ōsaka-fu
+Thu Nov 29 2018 18:05:39 GMT+0000: Date: Feb 6th 2019
+Thu Nov 29 2018 18:05:39 GMT+0000: ******Event 2 Information******
+Thu Nov 29 2018 18:05:39 GMT+0000: Venue Name: Zepp Nagoya
+Thu Nov 29 2018 18:05:39 GMT+0000: Location: Nagoya-shi, Aichi-ken
+Thu Nov 29 2018 18:05:39 GMT+0000: Date: Feb 7th 2019
+Thu Nov 29 2018 18:05:39 GMT+0000: ******Event 3 Information******
+Thu Nov 29 2018 18:05:39 GMT+0000: Venue Name: Nippon Budokan
+Thu Nov 29 2018 18:05:39 GMT+0000: Location: Chiyoda-ku, Tōkyō-to
+Thu Nov 29 2018 18:05:39 GMT+0000: Date: Feb 9th 2019
+Thu Nov 29 2018 18:05:39 GMT+0000: ******Event 4 Information******
+Thu Nov 29 2018 18:05:39 GMT+0000: Venue Name: Brisbane Entertainment Centre
+Thu Nov 29 2018 18:05:39 GMT+0000: Location: Boondall, 
+Thu Nov 29 2018 18:05:39 GMT+0000: Date: Feb 13th 2019
+Thu Nov 29 2018 18:05:39 GMT+0000: ******Event 5 Information******
+Thu Nov 29 2018 18:05:39 GMT+0000: Venue Name: Qudos Bank Arena
+Thu Nov 29 2018 18:05:39 GMT+0000: Date: Feb 15th 2019
+Thu Nov 29 2018 18:05:39 GMT+0000: Location: Sydney Olympic Park, 
+Thu Nov 29 2018 18:05:39 GMT+0000: ******Event 6 Information******
+Thu Nov 29 2018 18:05:39 GMT+0000: Venue Name: Rod Laver Arena
+Thu Nov 29 2018 18:05:39 GMT+0000: Location: Melbourne, 
+Thu Nov 29 2018 18:05:39 GMT+0000: Date: Feb 16th 2019
+Thu Nov 29 2018 18:05:41 GMT+0000: searching spotify for Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 1-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Sailing The Seas Of Cheese
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Primus
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 1991-01-01
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: null
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 2-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: They Can't All Be Zingers
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Primus
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2006-01-01
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: null
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 3-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat - 2013 Mix
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Sailing The Seas Of Cheese
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Primus
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 1991
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: null
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 4-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Suck on This (Remastered)
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Primus
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2002-04-23
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/ed581c3bf34f0216e89a73b14e32da0e09158deb?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 5-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat - Live Version
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Rhinoplasty
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Primus
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: null
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 1998-01-01
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 6-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Alley Cat Ska
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: The Best of the Skatalites
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Tommy McCook
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2017-02-24
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/19fbe39be59abb1fb565383858f8fc9042ea4535?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 7-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: 5400 North
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: The Nifty Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Roy Eldridge
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 1986-01-01
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/35870663f60e5777b06a821ba1a5cf8b5fa88e8f?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 8-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Persian Cat Ska (aka In a Persian Market)
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Tommy McCook
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Duke Reid Rocks Steady
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 1989-01-01
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/8d182ad5335b5726358393151cf5d54a0b5df5b7?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 9-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Stand Up
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Royal Jelly Jive
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2016-06-24
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/e7f06cb075b9614e3ddcec5d4f42a52461815aef?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 10-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Country POP On The Road
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: KGMP Music Machine
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2016-12-21
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/652e91e1b627c69ad14627cc15e7ff63fc860792?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 11-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: The Curious Hand
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Seamus Fogarty
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2017-10-06
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/8fbfea609745268473abd3e5dd611e19abd6b665?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 12-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy and the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Dmfn Skit Radio, Vol.1
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Selfxplanatory
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2012-06-30
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/07a139ad4a465a5cd2fa7958297d00281aa8a24d?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 13-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Country Songs, Vol. 23
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Michael Panasuk
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2018-09-01
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/21785085d912a6ef9845caa2c180ba9f6a02841e?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 14-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Vintage Plug 60: Session 34 - Contemporary Country, Vol. 3
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Michael Panasuk
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2015-03-30
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/82c6cf6563aa4e53b1876a90e224471bd76f753c?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 15-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Julie Bélanger Roy
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2017-02-14
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Pet Tales
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/92b4ef8f5c0c1c1612872a9ad444065e27d55796?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 16-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy the Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Meteors 05
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Vaen
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2017-12-22
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/f7d3499371bcdec17df68dd10f2cd1a77b3e5c97?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 17-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Wild Butter
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Wild Butter
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2015-12-30
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/8c05a49a23ccadd2400491aa384aa688b50adecb?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 18-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: Tommy The Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: Drauf bis zum letzten Day
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: JVMRK
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2018-01-27
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/47b43447c547296097a6802bbb4fbf434491cd19?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 19-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: The Song is You
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 2009-01-30
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Louis Scherr
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/9346da7b8e62e1735668481913a8f7585ac3d889?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: The Fire Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: -----Result 20-----
+Thu Nov 29 2018 18:05:41 GMT+0000: Track Name: The Nifty Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Album: The Nifty Cat
+Thu Nov 29 2018 18:05:41 GMT+0000: Release Date: 1986-01-01
+Thu Nov 29 2018 18:05:41 GMT+0000: Spotify URL: https://p.scdn.co/mp3-preview/918f2cd33bfe4827f5dc7daf7973090b21add3d3?cid=3ea440a86a0e410392edf7637145b2ba
+Thu Nov 29 2018 18:05:41 GMT+0000: Artist: Roy Eldridge
+Thu Nov 29 2018 18:05:43 GMT+0000: searching for Requiem for a Dream
+Thu Nov 29 2018 18:05:43 GMT+0000: ******Result 1******
+Thu Nov 29 2018 18:05:43 GMT+0000: Title: Requiem for a Dream
+Thu Nov 29 2018 18:05:43 GMT+0000: IMDB Rating: 8.3
+Thu Nov 29 2018 18:05:43 GMT+0000: Rotten Tomato Score: 79%
+Thu Nov 29 2018 18:05:43 GMT+0000: Country of Origin: USA
+Thu Nov 29 2018 18:05:43 GMT+0000: Language: English
+Thu Nov 29 2018 18:05:43 GMT+0000: Plot: The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.
+Thu Nov 29 2018 18:05:43 GMT+0000: Actors: Ellen Burstyn, Jared Leto, Jennifer Connelly, Marlon Wayans
+Thu Nov 29 2018 18:05:43 GMT+0000: ******Result 2******
+Thu Nov 29 2018 18:05:43 GMT+0000: Title: The Making of 'Requiem for a Dream'
+Thu Nov 29 2018 18:05:43 GMT+0000: Released: 2000
+Thu Nov 29 2018 18:05:43 GMT+0000: Released: 2001
+Thu Nov 29 2018 18:05:43 GMT+0000: IMDB Rating: 4.3
+Thu Nov 29 2018 18:05:43 GMT+0000: Rotten Tomato Score: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Country of Origin: USA
+Thu Nov 29 2018 18:05:43 GMT+0000: Language: English
+Thu Nov 29 2018 18:05:43 GMT+0000: Plot: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Actors: Darren Aronofsky, Ellen Burstyn, Jennifer Connelly, Jared Leto
+Thu Nov 29 2018 18:05:43 GMT+0000: ******Result 3******
+Thu Nov 29 2018 18:05:43 GMT+0000: Title: Requiem for a Dream
+Thu Nov 29 2018 18:05:43 GMT+0000: Released: 2006
+Thu Nov 29 2018 18:05:43 GMT+0000: IMDB Rating: 6.5
+Thu Nov 29 2018 18:05:43 GMT+0000: Rotten Tomato Score: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Country of Origin: USA
+Thu Nov 29 2018 18:05:43 GMT+0000: Language: English
+Thu Nov 29 2018 18:05:43 GMT+0000: Plot: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Actors: Marcus Maria Jung
+Thu Nov 29 2018 18:05:43 GMT+0000: ******Result 4******
+Thu Nov 29 2018 18:05:43 GMT+0000: Title: Requiem for a Dream (in 60 Seconds... with Puppets)
+Thu Nov 29 2018 18:05:43 GMT+0000: Released: 2012
+Thu Nov 29 2018 18:05:43 GMT+0000: IMDB Rating: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Rotten Tomato Score: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Country of Origin: Canada
+Thu Nov 29 2018 18:05:43 GMT+0000: Language: English
+Thu Nov 29 2018 18:05:43 GMT+0000: Plot: N/A
+Thu Nov 29 2018 18:05:43 GMT+0000: Actors: Brendan James Boyd, Jess Wood
