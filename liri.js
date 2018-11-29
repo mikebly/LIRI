@@ -13,7 +13,7 @@ let imdbIds = [];
 let moviesArray = [];
 let randomIndex;
 
-const bandsInTownPrompt = function () {
+const bandsInTownPrompt = function () { //prompt user for band to query for
     inquirer.prompt([
         {
             type: "input",
@@ -27,13 +27,13 @@ const bandsInTownPrompt = function () {
         });
 };
 
-const bandsInTown = function (query) {
+const bandsInTown = function (query) { //search bands in town for te given artist, build search url from user input
     artistUrl = `https://rest.bandsintown.com/artists/${query}/events?app_id=codingbootcamp`;
     console.log(artistUrl);
     axios.get(artistUrl)
         .then(function (response) {
             let { data: artistData } = response;
-            //console.log(artistData); //array of objects detailing concert events
+            //array of objects detailing concert events, loop over to display details
             artistEvents = artistData.map((event, index) => {
                 let { venue: venueData, datetime: eventTime } = event;
                 let dateObj = new Date(eventTime);
@@ -51,7 +51,7 @@ const bandsInTown = function (query) {
         });
 };
 
-const spotifyASongPrompt = function () {
+const spotifyASongPrompt = function () { //prompt user for track name to query for
     inquirer.prompt([
         {
             type: "input",
@@ -66,14 +66,17 @@ const spotifyASongPrompt = function () {
 
 };
 
-const spotifyASong = function (query) {
+const spotifyASong = function (query) { //query spotify for given track name
     console.log(`searching for ${query}`);
     spotify.search({ type: "track", query: query })
         .then(data => {
             //console.log(data);
+            //each result is stored in the response's tracks object
             const { items } = data.tracks;
+            //loop over array of returned tracks objects
             items.map((item, index) => {
                 //console.log(item);
+                //deconstruct response object to to display given data
                 const { preview_url: url, name: trackName } = item;
                 const { name: artistName } = item.artists[0];
                 const { name: albumName, release_date: date } = item.album
@@ -91,7 +94,7 @@ const spotifyASong = function (query) {
         .catch(error => { console.log(error) });
 };
 
-const searchOMDBPrompt = function () {
+const searchOMDBPrompt = function () { //prompt user for a movie title to query for
     inquirer.prompt([
         {
             type: "input",
@@ -106,20 +109,24 @@ const searchOMDBPrompt = function () {
 
 };
 
-const searchOMDB = function (query) {
+const searchOMDB = function (query) { //query OMDB for the movie title
+    //reset the arrays used for data sorting
     moviesArray = [];
     sortedMovies = [];
     imdbIds = [];
+    //query for general search to get multiple results, not singular title search. Use the resulting IMDB id's to retrieve more detailed data with singular serach. The multiple title query returns less data than desired.
     console.log(`searching for ${query}`);
     movieUrl = `http://www.omdbapi.com/?apikey=trilogy&s=${query}`;
     axios.get(movieUrl)
         .then(function (response) {
             //console.log(response.data.Search);
             let movieResults = response.data.Search;
+            //push the returned movie's IMDB id
             movieResults.map(movie => {
                 imdbIds.push(movie.imdbID);
             });
             //console.log(imdbIds);
+            //for every movie, fetch data on each individual title to retreive detailed info
             imdbIds.map((imdbId, index) => {
                 movieUrl = `http://www.omdbapi.com/?apikey=trilogy&i=${imdbId}`;
                 axios.get(movieUrl)
@@ -137,7 +144,7 @@ const searchOMDB = function (query) {
                         //console.log(Ratings[1]);
 
 
-                        //since some movies do not have a "Ratings" key, push empty data so newMovie can be made without errors
+                        //since some movies do not have a "Ratings" key, push empty data so newMovie object can be made without errors
                         if (Ratings[0] === undefined) {
                             Ratings.push({ Value: "N/A" }, { Value: "N/A" });
                         }
@@ -148,6 +155,7 @@ const searchOMDB = function (query) {
 
                         //console.log(Ratings)
 
+                        //grab desired data to push into moviesArray
                         let newMovie = {
                             id: index,
                             title: Title,
@@ -161,7 +169,7 @@ const searchOMDB = function (query) {
                         };
                         moviesArray.push(newMovie);
 
-                        //once the last api call is returned, print the data
+                        //once the last api call is returned, print the data. since data returns unordered, first sort by the order it was requested
                         if (moviesArray.length === imdbIds.length) {
                             //console.log(moviesArray);
                             let sortedMovies = moviesArray.sort(function (a, b) {
@@ -169,6 +177,7 @@ const searchOMDB = function (query) {
                             });
                             //console.log(sortedMovies);
 
+                            //once sorted, display details
                             sortedMovies.map(movie => {
                                 console.log(`******Result ${movie.id + 1}******`);
                                 console.log(`Title: ${movie.title}`);
@@ -181,6 +190,7 @@ const searchOMDB = function (query) {
                                 console.log(`Actors: ${movie.actors}`);
                                 
                             });
+                            //return to prompt
                             actionPrompt();
                         }
                         
@@ -195,6 +205,8 @@ const searchOMDB = function (query) {
         });
 };
 
+//select a command for LIRI randomly from random.txt to run.
+//data in random.txt is stored as "action,parameter,..."
 const doRandom = function () {
     fs.readFile('random.txt', 'utf-8', function (error, data) {
         if (error) {
@@ -204,16 +216,18 @@ const doRandom = function () {
         const randomActions = data.split(",");
         console.log(randomActions);
 
+        //since actions alternate with parameters in the array, take only even numbers
         randomIndex = Math.floor(Math.random() * (randomActions.length - 1));
         if (randomIndex % 2 !== 0) {
             randomIndex -= 1;
         }
-        console.log(randomIndex);
-        console.log(randomActions[randomIndex]);
-        console.log(randomActions[randomIndex + 1]);
+        // console.log(randomIndex);
+        // console.log(randomActions[randomIndex]);
+        // console.log(randomActions[randomIndex + 1]);
         let randomAction = randomActions[randomIndex];
-        let randomParameter = randomActions[randomIndex + 1];
+        let randomParameter = randomActions[randomIndex + 1]; //parameter is 1 index after action
 
+        //run the chosen random action with its designated parameter
         switch (randomAction) {
             case "Find Concert":
                 console.log(`Finding concert...`);
