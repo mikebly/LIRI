@@ -221,7 +221,6 @@ const searchOMDB = function (query) { //query OMDB for the movie title
                                 console.log(`Actors: ${movie.actors}`);
                                 updateLog(`Actors: ${movie.actors}\n`);
                                 
-                                
                             });
                             //return to prompt
                             actionPrompt();
@@ -299,6 +298,7 @@ function actionPrompt() {
         {
             type: "list",
             name: "action",
+            message:"Select an option",
             choices: ["Find Concert", "Spotify A Song", "Find Movie", "I'm Feeling Lucky...","Quit"]
         },
     ])
